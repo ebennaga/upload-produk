@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { upload } from "@vercel/blob/client";
 
 export const getImages = async () => {
   try {
@@ -19,5 +20,31 @@ export const getImageById = async (id: string) => {
     return result;
   } catch (error) {
     throw new Error("Failed to fetch data");
+  }
+};
+
+export const getSearchProduct = async (query: string) => {
+  try {
+    const uploads = await prisma.upload.findMany({
+      where: {
+        OR: [
+          {
+            JenisProduk: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+          {
+            title: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+        ],
+      },
+    });
+    return uploads;
+  } catch (error) {
+    throw new Error("Failed to fetch contact data");
   }
 };
