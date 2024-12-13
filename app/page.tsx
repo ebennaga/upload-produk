@@ -12,7 +12,6 @@ export default async function Home({
 }) {
   const query = searchParams?.query || "";
   const images = await getSearchProduct(query);
-  console.log(images);
   // const images = await getImages();
 
   return (
