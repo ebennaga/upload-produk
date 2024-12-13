@@ -21,7 +21,7 @@ const Card = ({ data }: { data: Upload }) => {
         />
       </div>
       <div className="p-5">
-        <h1 className="text-xl font-bold text-gray-900 truncate">
+        <h1 className="text-xl font-bold text-gray-900 truncate text-center">
           {data.title}
         </h1>
       </div>
