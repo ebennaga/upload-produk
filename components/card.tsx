@@ -7,7 +7,7 @@ const Card = ({ data }: { data: Upload }) => {
     <div className="max-w-sm border border-gray-200 rounded-md shadow">
       <div className="p-5">
         <h1 className="text-2xl font-bold text-gray-900 truncate text-center">
-          Produk = {data.JenisProduk}
+          {data.JenisProduk}
         </h1>
       </div>
       <div className="relative aspect-video">
@@ -22,7 +22,7 @@ const Card = ({ data }: { data: Upload }) => {
       </div>
       <div className="p-5">
         <h1 className="text-xl font-bold text-gray-900 truncate">
-          Description = {data.title}
+          {data.title}
         </h1>
       </div>
       <div className="flex items-center justify-between">
