@@ -5,6 +5,11 @@ import type { Upload } from "@prisma/client";
 const Card = ({ data }: { data: Upload }) => {
   return (
     <div className="max-w-sm border border-gray-200 rounded-md shadow">
+      <div className="p-5">
+        <h1 className="text-2xl font-bold text-gray-900 truncate text-center">
+          Produk = {data.JenisProduk}
+        </h1>
+      </div>
       <div className="relative aspect-video">
         <Image
           src={data.image}
@@ -16,8 +21,8 @@ const Card = ({ data }: { data: Upload }) => {
         />
       </div>
       <div className="p-5">
-        <h1 className="text-2xl font-bold text-gray-900 truncate">
-          {data.title}
+        <h1 className="text-xl font-bold text-gray-900 truncate">
+          Description = {data.title}
         </h1>
       </div>
       <div className="flex items-center justify-between">
