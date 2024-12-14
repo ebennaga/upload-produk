@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 export default function Login() {
   const router = useRouter(); // Pindahkan useRouter ke dalam komponen React
@@ -12,7 +12,7 @@ export default function Login() {
   const handleLogin = (e: any) => {
     e.preventDefault();
     if (username === "admin" && password === "123456") {
-      router.push("/home");
+      router.push("/home"); // Redirect ke halaman home
     } else {
       setError("Invalid username or password!");
     }
