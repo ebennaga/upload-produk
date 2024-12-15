@@ -63,8 +63,8 @@ export const uploadImage = async (prevState: unknown, formData: FormData) => {
     return { message: "Failed to create data" };
   }
 
-  revalidatePath("/");
-  redirect("/");
+  revalidatePath("/home");
+  redirect("/home");
 };
 
 // Update image
@@ -112,8 +112,8 @@ export const updateImage = async (
     return { message: "Failed to update data" };
   }
 
-  revalidatePath("/");
-  redirect("/");
+  revalidatePath("/home");
+  redirect("/home");
 };
 
 // Delete Image
@@ -130,5 +130,5 @@ export const deleteImage = async (id: string) => {
     return { message: "Failed to delete data" };
   }
 
-  revalidatePath("/");
+  revalidatePath("/home");
 };
