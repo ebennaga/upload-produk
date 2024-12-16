@@ -40,7 +40,7 @@ const EditForm = ({ data }: { data: Upload }) => {
           type="text"
           name="title"
           className="py-2 px-4 rounded-sm border border-gray-400 w-full"
-          placeholder="Title..."
+          placeholder="Description..."
           defaultValue={data.title}
         />
         <div aria-live="polite" aria-atomic="true">

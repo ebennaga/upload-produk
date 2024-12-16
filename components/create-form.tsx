@@ -36,7 +36,7 @@ const CreateForm = () => {
           type="text"
           name="title"
           className="py-2 px-4 rounded-sm border border-gray-400 w-full"
-          placeholder="Title..."
+          placeholder="Description..."
         />
         <div aria-live="polite" aria-atomic="true">
           <p className="text-sm text-red-500 mt-2">{state?.error?.title}</p>
