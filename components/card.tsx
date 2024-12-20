@@ -20,14 +20,17 @@ const Card = ({ data }: { data: Upload }) => {
           className="rounded-t-md object-cover"
         />
       </div>
-      <div className="p-5">
-        <h1 className="text-xl font-bold text-gray-900 truncate text-center">
-          {data.title}
-        </h1>
-      </div>
-      <div className="flex items-center justify-between">
-        <EditButton id={data.id} />
-        <DeleteButton id={data.id} />
+        <div className="p-5">
+            <h1 className="text-xl font-bold text-gray-900 truncate text-center">
+                {data.title}
+            </h1>
+            <h1 className="text-xl font-bold text-gray-900 truncate text-center">
+                {data.KeteranganProduk}
+            </h1>
+        </div>
+        <div className="flex items-center justify-between">
+            <EditButton id={data.id}/>
+            <DeleteButton id={data.id} />
       </div>
     </div>
   );

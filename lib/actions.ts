@@ -9,6 +9,7 @@ import { getImageById } from "@/lib/data";
 const UploadSchema = z.object({
   title: z.string().min(1),
   JenisProduk: z.string().min(1),
+  KeteranganProduk: z.string().min(1),
   image: z
     .instanceof(File)
     .refine((file) => file.size > 0, { message: "Image is required" })
@@ -23,6 +24,7 @@ const UploadSchema = z.object({
 const EditSchema = z.object({
   title: z.string().min(1),
   JenisProduk: z.string().min(1),
+  KeteranganProduk: z.string().min(1),
   image: z
     .instanceof(File)
     .refine((file) => file.size === 0 || file.type.startsWith("image/"), {
@@ -45,7 +47,7 @@ export const uploadImage = async (prevState: unknown, formData: FormData) => {
     };
   }
 
-  const { title, image, JenisProduk } = validatedFields.data;
+  const { title, image, JenisProduk, KeteranganProduk } = validatedFields.data;
   const { url } = await put(image.name, image, {
     access: "public",
     multipart: true,
@@ -56,6 +58,7 @@ export const uploadImage = async (prevState: unknown, formData: FormData) => {
       data: {
         title,
         JenisProduk,
+        KeteranganProduk,
         image: url,
       },
     });
@@ -86,7 +89,7 @@ export const updateImage = async (
   const data = await getImageById(id);
   if (!data) return { message: "No Data Found" };
 
-  const { title, image, JenisProduk } = validatedFields.data;
+  const { title, image, JenisProduk, KeteranganProduk } = validatedFields.data;
   let imagePath;
   if (!image || image.size <= 0) {
     imagePath = data.image;
@@ -104,6 +107,7 @@ export const updateImage = async (
       data: {
         title,
         JenisProduk,
+        KeteranganProduk,
         image: imagePath,
       },
       where: { id },
