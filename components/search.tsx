@@ -26,7 +26,7 @@ const Search = () => {
       <input
         type="text"
         className="w-full border border-gray-200 py-2 pl-10 text-sm outline-2 rounded-sm"
-        placeholder="Search Produk...."
+        placeholder="Search News...."
         onChange={(e) => handleSearch(e.target.value)}
         defaultValue={searchParams.get("query")?.toString()}
       />

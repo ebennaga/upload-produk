@@ -23,7 +23,7 @@ const CreateForm = () => {
           type="text"
           name="JenisProduk"
           className="py-2 px-4 rounded-sm border border-gray-400 w-full"
-          placeholder="Nama Produk..."
+          placeholder="Nama News..."
         />
         <div aria-live="polite" aria-atomic="true">
           <p className="text-sm text-red-500 mt-2">
@@ -42,17 +42,17 @@ const CreateForm = () => {
           <p className="text-sm text-red-500 mt-2">{state?.error?.title}</p>
         </div>
       </div>
-      <div className="mb-4 pt-2">
-        <input
-          type="text"
-          name="KeteranganProduk"
-          className="py-2 px-4 rounded-sm border border-gray-400 w-full"
-          placeholder="Keterangan Produk..."
-        />
-        <div aria-live="polite" aria-atomic="true">
-          <p className="text-sm text-red-500 mt-2">{state?.error?.title}</p>
-        </div>
-      </div>
+      {/*<div className="mb-4 pt-2">*/}
+      {/*  <input*/}
+      {/*    type="text"*/}
+      {/*    name="KeteranganProduk"*/}
+      {/*    className="py-2 px-4 rounded-sm border border-gray-400 w-full"*/}
+      {/*    placeholder="Keterangan Produk..."*/}
+      {/*  />*/}
+      {/*  <div aria-live="polite" aria-atomic="true">*/}
+      {/*    <p className="text-sm text-red-500 mt-2">{state?.error?.title}</p>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
       <div className="mb-4 pt-2">
         <input
           type="file"

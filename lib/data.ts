@@ -45,6 +45,7 @@ export const getSearchProduct = async (query: string) => {
     });
     return uploads;
   } catch (error) {
+    console.log('error',error)
     throw new Error("Failed to fetch contact data");
   }
 };

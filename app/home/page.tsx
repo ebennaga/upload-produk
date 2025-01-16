@@ -17,12 +17,12 @@ export default async function Home({
   return (
     <div className="max-w-screen-lg mx-auto py-14">
       <div className="flex items-end justify-between">
-        <h1 className="text-4xl font-bold">All Produk</h1>
+        <h1 className="text-4xl font-bold">All News</h1>
         <Link
           href="/create"
           className="py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white"
         >
-          Upload New Produk
+          Input News
         </Link>
       </div>
       <div className="flex items-center justify-between gap-1 mb-5 mt-10">
