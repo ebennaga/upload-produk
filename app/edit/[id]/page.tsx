@@ -9,7 +9,7 @@ const EditPage = async ({ params }: { params: { id: string } }) => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-100">
       <div className="bg-white rounded-sm shadow p-8">
-        <h1 className="text-2xl font-bold mb-5">Update Image</h1>
+        <h1 className="text-2xl font-bold mb-5">Update News</h1>
         <EditForm data={data} />
       </div>
     </div>
